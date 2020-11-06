@@ -1,0 +1,139 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/buyFlat.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+
+        title Agenstvo
+    body(onload="number();")
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .container
+      p.title Оформление заказа
+      .flats
+        .user
+          p.us Информация о квартире
+        .info
+          .text
+            p Район:
+            p Адрес:
+            p Тип дома:
+            p Количество комнат:
+            p Жилая площадь:
+            p Этажность:
+            p Цена:
+          .data
+            p=flat.DISTRICT
+            p=flat.ADDRESS
+            p=flat.TYPE_OF_HOUSE
+            p=flat.NUMBER_OF_ROOMS
+            p=flat.LIVING_SPACE+ ' м²'
+            p=flat.FLOOR
+            p.price=flat.PRICE+' ₽'
+
+      .owner
+        .user
+          p.us Информация о продавце
+        .info
+          .text
+            p ФИО:
+            p Адрес:
+            p Дата рождения:
+            p Email:
+            p Номер домашнего телефона:
+            p Номер мобильного телефона:
+            p Серия паспорта:
+            p Номер паспорта:
+            p Дата выдачи:
+            p Орган, выдавший паспорт:
+          .data
+            p=owner.FULL_NAME
+            p=owner.ADDRESS
+            p=owner.DATE_OF_BIRTH
+            p=owner.EMAIL
+            p=owner.HOME_PHONE
+            p=owner.MOBILE_PHONE
+            p=owner.PASSPORT_SERIES
+            p=owner.PASSPORT_NUMBER
+            p=owner.DATE_OF_ISSUE
+            p=owner.PASSPORT_ISSUING_AUTHORITY
+      .list
+        p Выберите покупателя:
+        input#s1(list='client')
+        datalist#client
+            each val,index in NewClients
+                option=val.FULL_NAME
+        button.add(type='button', onclick='Recive()') Найти
+        .href
+          a.use(href='/create/'+flat.ID_APARTMENT+'/') Новый пользователь
+      #clients(style="display:none")
+        .user
+          p.us Информация о покупателе
+        .info
+          .text
+            p ФИО:
+            p Адрес:
+            p Дата рождения:
+            p Email:
+            p Номер домашнего телефона:
+            p Номер мобильного телефона:
+            p Серия паспорта:
+            p Номер паспорта:
+            p Дата выдачи:
+            p Орган, выдавший паспорт:
+          .data
+            p#name
+            p#address
+            p#dob
+            p#email
+            p#home
+            p#mobile
+            p#ps
+            p#pn
+            p#doi
+            p#pia
+      form.info(method='POST')
+        input#id(type='text', name='buyer')
+        input#date(type='text', name='date')
+        button#btn.add(type='submit') Оформить
+      script(
+        src='/js/addText.js'
+      )
+      script(
+        src='/js/formatPrice.js'
+      )

@@ -1,0 +1,91 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='css/flats.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        title Agenstvo
+    body(onload="number();")
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+
+    .search
+      .squer
+        p.sq Площадь
+        input#sq_from(type='text', placeholder ='от', pattern="[0-9]", minlength="2", maxlength="3")
+        input#sq_to(type='text', placeholder ='до', pattern="[0-9]", minlength="2", maxlength="3")
+      .rooms
+        p.ro Комнатность
+        .btn-togroup
+          input#one.checkbox(type='checkbox', autocomplete='off',name='one', value='1')
+          label.btn.btn-primary.start(for='one') 1
+          input#two.checkbox(type='checkbox', autocomplete='off', name='two', value='2')
+          label.btn.btn-primary(for='two') 2
+          input#three.checkbox(type='checkbox', name='three', value='3', autocomplete='off')
+          label.btn.btn-primary(for='three') 3
+          input#thour.checkbox(type='checkbox', autocomplete='off', name='thour', value='4')
+          label.btn.btn-primary.end(for='thour') 4
+      .pricesto
+        p.pr Стоимость
+        input#cost_from(type='text', placeholder ='от', pattern="[0-9]", minlength="5", maxlength="10")
+        input#cost_to(type='text', placeholder ='до',pattern="[0-9]", minlength="5", maxlength="10")
+        button.add(type='button', onclick='getFlat()') Найти
+    .box-items#vi
+      each val,index in flats
+        .box-item
+          img(src='images/'+val['PHOTO1'])
+          p#price.price #{val.PRICE} ₽
+          p.floor=val.NUMBER_OF_ROOMS+' комнаты | '+ val.LIVING_SPACE+' м² | '+ val.FLOOR
+          p.address #{val.ADDRESS}
+          p.district #{val.DISTRICT}
+          .box-btn
+            a.detail(href='detail/'+val.ID_APARTMENT+'/') Подробнее
+    .box-items#vis(style="display:none")
+        .box-item
+          img
+          p#price.price
+          p.ftoloorFLOOR
+          p.address
+          p.district
+          .box-btn
+            a.detail(href='detail//') Подробнее
+    script(
+      src='js/getFlat.js'
+    )
+    script(
+      src='js/formatPrice.js'
+    )

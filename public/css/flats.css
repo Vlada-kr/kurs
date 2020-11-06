@@ -1,0 +1,245 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #e7eaef;
+  font-family: 'Open Sans', sans-serif;
+}
+top{
+  width: 100%;
+  height: 600px;
+  background: url(/images/bg_main.jpg) no-repeat bottom center;
+  margin-bottom: 20px;
+}
+.container{
+  width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-table{
+  width: 1780px;
+  margin: 0 auto;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 5px;
+}
+.menu-list {
+  text-align: center;
+  max-height: 100px;
+  padding: 20px 0;
+  background: rgba(28,54,85,.4);
+  width: 100%;
+  color: #fff;
+}
+.nav li{
+  display: inline;
+  margin: 0 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 35px;
+
+}
+.login{
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 16px 0;
+  width: 450px;
+  height: 35px
+}
+.login i{
+  padding-left: 20px;
+  font-size: 30px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.login a{
+  vertical-align: sub;
+  padding-left: 120px;
+}
+.box-items{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1700px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+.box-item{
+  text-align: center;
+  margin: 0 20px 40px;
+  width: 380px;
+  height: 500px;
+  background: #fff;
+}
+img{
+  margin-top: 15px;
+  height: 200px;
+}
+.box-btn{
+  margin: 45px 0;
+}
+.detail{
+  border: 2px solid #000;
+  color: #000;
+  padding: 15px 35px;
+  background: #fff;
+}
+
+p{
+  font-size: 15px;
+}
+.price{
+  font-weight: bold;
+  font-size: 25px;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.rooms{
+  margin: 0 20px;
+}
+.item_room{
+  height: 35px;
+}
+.pr, .sq, .ro{
+  font-weight: bold;
+}
+#cost_from, #cost_to
+{
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  box-shadow: none;
+  outline: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid #808080;
+}
+
+#sq_from, #sq_to
+{
+  padding: 10px;
+  width: 120px;
+  height: 40px;
+  box-shadow: none;
+  outline: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid #808080;
+}
+
+.add{
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  background: #628ca6;
+  border: 1px solid #628ca6;
+  color: #fff
+}
+.add:hover{
+  background: rgba(62,8c,a6,.4);
+  border: 1px solid #628ca6;
+  color: #000;
+}
+.btn-primary{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #808080;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: .400rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.start{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.end{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+.btn-group input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
+.btn-group input[type="checkbox"]:checked + label.btn-primary{
+    color: #000;
+    background-color: #628ca6;
+    background-image: none;
+    border-color: #628ca6;
+    background-image: none;
+    outline: 0;
+}
+
+.btn-group input[type="checkbox"]:focus + label.btn-primary,
+.btn-group input[type="checkbox"]:hover + label.btn-primary {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    color: #000;
+    background-color: #e9e9e9;
+    border-color: #e9e9e9;
+}
+
+.btn-group input[type="checkbox"]:checked:focus + label.btn-primary,
+.btn-group input[type="checkbox"]:checked:hover + label.btn-primary {
+  color: #fff;
+  background-color: #628ca6;
+  border-color: #628ca6;
+}
+.mainmenubtn {
+    color: white;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: rgba(28,54,85,.7);
+    width: 360px;
+    left: 50px;
+    margin-left: 143px;
+    margin-top: 10px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}

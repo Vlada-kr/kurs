@@ -1,0 +1,80 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        link(
+            rel='stylesheet'
+            href='css/style.css'
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        title Agenstvo
+    body
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .box
+      .container
+        p.text Вы хотите:
+        .box-items
+          .box-item
+            a(href='/flats')
+              .box-item__index
+                i
+                  img(src='images/kupit.png', alt='')
+              .box-item__text
+                .text__buy
+                  | Купить
+          .box-item
+            a(href='/createFlat/Seller')
+              .box-item__index
+                i
+                  img(src='images/prodat.png', alt='')
+              .box-item__text
+                .text__buy
+                  | Продать
+          .box-item.bottoms
+            a(href='/')
+              .box-item__index
+                i
+                  img(src='images/rent_i.png', alt='')
+              .box-item__text
+                .text__buy
+                  | Снять
+          .box-item.bottoms
+            a(href='/')
+              .box-item__index
+                i
+                  img(src='images/sdat.png', alt='')
+              .box-item__text
+                .text__buy
+                  | Сдать

@@ -1,0 +1,57 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/flats.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        title Agenstvo
+    body(onload="number();")
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .box-items
+      each val,index in flat
+        .box-item
+          img(src='/images/'+val['PHOTO1'])
+          p.price #{val.PRICE} ₽
+          p.floor #{val.NUMBER_OF_ROOMS} комнаты | #{val.LIVING_SPACE} | #{val.FLOOR}
+          p.address #{val.ADDRESS}
+          p.district #{val.DISTRICT}
+          .box-btn
+            a.detail(href='/detail/'+val.ID_APARTMENT+'/') Подробнее
+    script(
+      src='/js/formatPrice.js'
+    )

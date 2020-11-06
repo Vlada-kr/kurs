@@ -1,0 +1,98 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/createClients.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+
+        title Agenstvo
+    body
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    p Введите информацию о новом квартире:
+    form(action='/createFlat', method='post', enctype='multipart/form-data')
+      label Тип дома:
+      input(type='text', name='TYPE_OF_HOME')
+      br
+      label Район:
+      input(type='text', name='DISTRICT')
+      br
+      label Адрес:
+      input(type='text', name='ADDRESS')
+      br
+      label Количество комнат:
+      input(type='text', name='NUMBER_OF_ROOMS')
+      br
+      label Общая площадь:
+      input(type='text', name='TOTAL_AREA')
+      br
+      label Жилая площадь:
+      input(type='text', name='LIVING_SPACE')
+      br
+      label Площадь кухни:
+      input(type='text', name='KITCHEN_AREA')
+      br
+      label Этажность:
+      input(type='text', name='FLOOR')
+      br
+      label Количество спален:
+      input(type='text', name='BEDROOMS')
+      br
+      label Количество ванных комнат:
+      input(type='text', name='BATHROOM')
+      br
+      label Санузел:
+      input(type='text', name='A_BATHROOM')
+      br
+      label Количество балконов:
+      input(type='text', name='BALCONY')
+      br
+      label Вид из окна:
+      input(type='text', name='VIEW_FROM_THE_WINDOW')
+      br
+      label Цена:
+      input(type='text', name='PRICE')
+      br
+      label Описание:
+      input(type='text', name='DESCRIPTION')
+      input(type="file", multiple accept="image/*" name='photo1')
+      input(type="file", multiple accept="image/*" name='photo2')
+      input(type="file", multiple accept="image/*" name='photo3')
+      input(type="file", multiple accept="image/*" name='photo4')
+      input(type="file", multiple accept="image/*" name='photo5')
+      input(type="file", multiple accept="image/*" name='photo6')
+      input(type='submit', value='Send')

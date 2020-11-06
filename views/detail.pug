@@ -1,0 +1,124 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/detailflats.css'
+        )
+        link(
+            rel="stylesheet"
+            href="/css/slick.css"
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        )
+        script(
+          src="/js/slick.min.js"
+        )
+        script(
+          src="/js/main.js"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        title Agenstvo
+    body(onload="number();")
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .reviews
+      .container-slider
+        .reviews-slider
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO1)
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO2)
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO3)
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO4)
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO5)
+          .reviews-slider__item
+            .reviews-slider__images
+              img(src='/images/'+flat.PHOTO6)
+    .information
+      .text
+        p.text=flat.NUMBER_OF_ROOMS+' комнаты, '+flat.LIVING_SPACE+' м², '+ flat.FLOOR
+      .price
+        p#price.price=flat.PRICE+' ₽'
+    p.address=flat.ADDRESS
+    .descr
+      p.tit Описание
+      p.com=flat.DESCRIPTION
+    .params
+      p.tit Характеристики
+      p.flat О квартире
+      .list
+          .desk-object__name
+            p Комнатность:
+            p Общая площадь:
+            p Жилая площадь:
+            p Площадь кухни:
+            p Количество спален:
+            p Количество ванных комнат:
+            p Санузел:
+            p Количество балконов:
+            p Вид из окна:
+          .desk-object__value
+            p=flat.NUMBER_OF_ROOMS
+            p=flat.TOTAL_AREA+' м²'
+            p=flat.LIVING_SPACE+' м²'
+            p=flat.KITCHEN_AREA+' м²'
+            p=flat.BEDROOMS
+            p=flat.BATHROOMS
+            p=flat.A_BATHROOM
+            p=flat.BALCONY
+            p=flat.VIEW_FROM_THE_WINDOW
+      p.flat О доме
+      .list
+          .desk-object__name
+            p Тип дома:
+            p Этаж/этажность:
+          .desk-object__value
+            p=flat.TYPE_OF_HOUSE
+            p=flat.FLOOR
+    .btn_buy
+      a.buy(href='/buy/'+flat.ID_APARTMENT+'/') Оформить
+    script(
+      src='/js/formatPrice.js'
+    )

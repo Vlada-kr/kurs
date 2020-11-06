@@ -1,0 +1,55 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='css/realtor_style.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        title Agenstvo
+    body
+      .top
+        .menu-list
+          .container
+            .wrapper
+              .nav
+                ul
+                  li
+                    a(href='/') Главная
+                  li
+                    a(href='/flats') Квартиры
+                  li
+                    a(href='/clients') Клиенты
+                  li
+                    a(href='/realtors') Риэлторы
+              .login.dropdown
+                  a.mainmenubtn(href='/realtors') #{name}
+                  .dropdown-child
+                    a(href='#') Статистика
+                    a(href='logout') Выход
+      .realtor-items
+          each val,index in RD
+            .realtor-item
+              .realtor-item__img
+                img(src='images/'+val['PHOTO'])
+              .realtor-item__text
+                p.name #{val.FULL_NAME}
+                p.position #{val['POSITION']}
+                a.email(href='mailto:'+val.EMAIL) #{val.EMAIL}
+                .realtor-item__btn
+                a.list(href='flats/realtor/'+val.ID_REALTOR+'/') Список объектов

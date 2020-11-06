@@ -1,0 +1,45 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='css/login_style.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        title Agenstvo
+    body
+      if messages.error
+      p.error=messages.error
+      .container
+        .form
+          form(action='/login', method='POST')
+            p АВТОРИЗАЦИЯ
+            .form-input
+              input(
+                type='email'
+                id='email'
+                name='email'
+                placeholder='e-mail'
+                )
+              input(
+                type='password'
+                id='password'
+                name='password'
+                placeholder='password'
+                )
+            .form-btn
+              button(
+                class="submit",
+                type="submit"
+              ) Вход

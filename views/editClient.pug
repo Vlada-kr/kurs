@@ -1,0 +1,85 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/createClients.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+
+        title Agenstvo
+    body
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .createClient-form
+      .container
+        .form-inner
+          p Введите новую информацию о клиенте
+          form.create(method='POST')
+            label ID:
+            input(type='text', name='id', value=NewClient.ID_CLIENT)
+            br
+            label ФИО:
+            input(type='text', name='name', value=NewClient.FULL_NAME)
+            br
+            label Адрес:
+            input(type='text', name='address', value=NewClient.ADDRESS)
+            br
+            label Дата рождения:
+            input(type='text', name='dob' class='in-date', value=NewClient.DATE_OF_BIRTH)
+            br
+            label E-mail:
+            input(type='email', name='email', value=NewClient.EMAIL )
+            br
+            label Номер домашнего телефона:
+            input(type='tel', name='home_phone', value=NewClient.HOME_PHONE, maxlength="11")
+            br
+            label Номер мобильного телефона:
+            input(type='tel', name='mobile_phone', value=NewClient.MOBILE_PHONE, pattern="[0-9]{11}", minlength="11", maxlength="11")
+            br
+            label Серия паспорта:
+            input(type='text', name='passport_series', value=NewClient.PASSPORT_SERIES, pattern="[0-9]{4}", minlength="4", maxlength="4")
+            br
+            label Номер паспорта:
+            input(type='text', name='passport_number', value=NewClient.PASSPORT_NUMBER, pattern="[0-9]{6}", minlength="6", maxlength="6")
+            br
+            label Дата выдачи:
+            input(type='text', name='doi' class='in-date', value=NewClient.DATE_OF_ISSUE)
+            br
+            label Орган, выдавший паспорт:
+            input(type='text', name='pia', value=NewClient.PASSPORT_ISSUING_AUTHORITY)
+            br
+            .btn
+              button.add(type='submit') Изменить

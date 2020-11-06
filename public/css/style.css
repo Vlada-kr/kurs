@@ -1,0 +1,130 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.top{
+  width: 100%;
+  height: 600px;
+  background: url(/images/bg_main.jpg) no-repeat bottom center;
+  margin-bottom: 20px;
+}
+.container{
+  width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 5px;
+}
+.menu-list {
+  text-align: center;
+  max-height: 100px;
+  padding: 20px 0;
+  background: rgba(28,54,85,.2);
+  width: 100%;
+  color: #fff;
+}
+.nav li{
+  display: inline;
+  margin: 0 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 35px;
+
+}
+.login{
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 16px 0;
+  width: 450px;
+  height: 35px
+}
+.login i{
+  padding-left: 20px;
+  font-size: 30px;
+}
+a{
+  text-decoration: none;
+    color: #fff;
+}
+.login a{
+  vertical-align: sub;
+  padding-left: 120px;
+}
+.box-items{
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box-item {
+    width: 555px;
+    height: 260px;
+    vertical-align: top;
+    margin: 20px 0px;
+    border: 3px solid #bfd9f2;
+    border-radius: 4px;
+    background: #bfd9f2;
+    color: white;
+    text-align: center;
+}
+.bottoms{
+  margin-bottom: 50px;
+}
+p.text{
+  width: 1150px;
+  background: #bfd9f2;
+  font-size: 30px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  color: #fff;
+}
+.box-item:hover{
+    background: #9ba8b8;
+    border: 3px solid #9ba8b8;
+}
+.box-item__text{
+  margin-top: 5px;
+}
+.box-item__index {
+    margin-top: 50px;
+}
+.text__buy {
+  color: #fff;
+  font-size: 30px;
+}
+.mainmenubtn {
+    color: white;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: rgba(28,54,85,.7);
+    width: 360px;
+    left: 50px;
+    margin-left: 143px;
+    margin-top: 10px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}

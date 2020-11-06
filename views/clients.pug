@@ -1,0 +1,80 @@
+html
+    head
+        meta(charset='utf-89')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        )
+        meta(
+            http-equiv='X-UA-Compatible'
+            content='ie=edge'
+        )
+        link(
+            rel='stylesheet'
+            href='css/clients_style.css'
+        )
+        link(
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap",
+            rel="stylesheet"
+        )
+        script(
+          src='https://kit.fontawesome.com/fee30ffac9.js',
+          crossorigin='anonymous'
+        )
+        script(
+          src='js/client_list.js'
+        )
+        title Agenstvo
+    body
+    .top
+      .menu-list
+        .container
+          .wrapper
+            .nav
+              ul
+                li
+                  a(href='/') Главная
+                li
+                  a(href='/flats') Квартиры
+                li
+                  a(href='/clients') Клиенты
+                li
+                  a(href='/realtors') Риэлторы
+            .login.dropdown
+                a.mainmenubtn(href='/realtors') #{name}
+                .dropdown-child
+                  a(href='#') Статистика
+                  a(href='logout') Выход
+    .edit_btn
+        a.btn(href='/create') Добавить пользователя
+    .list_clients
+      .container-table
+        table.table_dark
+          tr
+            th ID
+            th ФИО
+            th Адрес
+            th Дата рождения
+            th Номер домашнего телефона
+            th Номер мобильного телефона
+            th E-mail
+            th Серия паспорта
+            th Номер паспорта
+            th Дата выдачи
+            th Орган, выдавший паспорт
+            th
+              each val,index in NewClients
+                tr
+                  td #{val.ID_CLIENT}
+                  td #{val.FULL_NAME}
+                  td #{val.ADDRESS}
+                  td #{val.DATE_OF_BIRTH}
+                  td #{val.HOME_PHONE}
+                  td #{val.MOBILE_PHONE}
+                  td #{val.EMAIL}
+                  td #{val.PASSPORT_SERIES}
+                  td #{val.PASSPORT_NUMBER}
+                  td #{val.DATE_OF_ISSUE}
+                  td #{val.PASSPORT_ISSUING_AUTHORITY}
+                  td
+                    a.table(href='/edit/'+val.ID_CLIENT+'/') Изменить

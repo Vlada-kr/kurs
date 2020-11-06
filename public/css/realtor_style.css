@@ -1,0 +1,142 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #e7eaef;
+  font-family: 'Open Sans', sans-serif;
+}
+.top{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container{
+  width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 5px;
+}
+.menu-list {
+  text-align: center;
+  max-height: 100px;
+  padding: 20px 0;
+  background: rgba(28,54,85,.4);
+  width: 100%;
+  color: #fff;
+}
+.nav li{
+  display: inline;
+  margin: 0 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 35px;
+
+}
+.login{
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 16px 0;
+  width: 450px;
+  height: 35px
+}
+.login i{
+  padding-left: 20px;
+  font-size: 30px;
+}
+a{
+  text-decoration: none;
+    color: #fff;
+}
+.login a{
+  vertical-align: sub;
+  padding-left: 120px;
+}
+.realtor-items{
+  display:  flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
+
+}
+.realtor-item{
+  text-align: center;
+
+
+}
+.realtor-item__img{
+  padding: 10px;
+  border: 2px solid #000;
+}
+.realtor-item__img img{
+
+  height: 400px;
+}
+.realtor-item__text{
+margin-top: 40px;
+}
+/*.realtor-item img{
+  width: 75%;
+}*/
+.name{
+  font-weight: bold;
+}
+.position{
+  font-size: 16px;
+}
+.email{
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+.realtor-item__btn{
+  text-align: center;
+  margin: 40px auto 40px;
+
+}
+.list {
+  background: #628ca6;
+  border: 3px solid #628ca6;
+  color: #fff;
+  width: 160px;
+  border-radius: 4px;
+  font-size: 15px;
+  display: block;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.list:hover{
+  color: #000;
+  border: 3px solid #628ca6;
+  background: #fff;
+}
+.mainmenubtn {
+    color: white;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: rgba(28,54,85,.7);
+    width: 360px;
+    left: 50px;
+    margin-left: 143px;
+    margin-top: 10px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}

@@ -1,0 +1,66 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/bg_login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  width: 1110px;
+  margin: 0 auto;
+}
+p .error{
+  color: #fff;
+}
+.form-input{
+  text-align: center;
+}
+.form-btn{
+  text-align: center;
+  margin-top: 20px;
+}
+form{
+    width: 420px;
+    height: 406px;
+    margin-top: 292px;
+    margin-left: 340px;
+    background: rgba(28,54,85,.5);
+    border-radius: 4px;
+}
+form label{
+  color: #fff;
+  font-size: 20px;
+}
+form p{
+  	color: #fff;
+    text-align: center;
+    line-height: 12px;
+    letter-spacing: 1px;
+    font-size: 35px;
+    padding-top: 45px;
+}
+
+input{
+    margin: 20px auto;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    letter-spacing: 1px;
+
+}
+.form-btn button{
+ 	 width: 175px;
+    height: 60px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #77cc79;
+}
+.form-btn button:hover{
+  background-color: #b3f0c5;
+}
